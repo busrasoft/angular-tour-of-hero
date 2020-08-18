@@ -23,7 +23,7 @@ export class HeroesComponent implements OnInit {
   }
 
   add(name: string): void {
-    name = name.trim();
+    name = name.trim(); // I deleted space with trim()
     if (!name) { return; }
     this.heroService.addHero({ name } as Hero)
       .subscribe(hero => {
